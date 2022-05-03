@@ -20,12 +20,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var b3: UIButton!
     @IBOutlet weak var b4: UIButton!
     @IBOutlet weak var b5: UIButton!
+
     
     
     
     var check = "X"
     var empty = " "
-    var crossOn = false
     
     
     
@@ -36,13 +36,16 @@ class ViewController: UIViewController {
             
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-        crossOn.toggle()
-        
-        if crossOn == true {
+        if sender.currentTitle == nil {
             sender.setTitle(check, for: .normal)
         }
-        if crossOn == false {
-            sender.setTitle(empty, for: .normal)
+        else {
+            if sender.currentTitle == check {
+                sender.setTitle(empty, for: .normal)
+            }
+            else {
+                sender.setTitle(check, for: .normal)
+            }
         }
     }
 }
