@@ -10,3 +10,5 @@ App consists of 10 squares that, when pressed, displays an "X"
 
 **Fixed bug
 -Button display now changed on single button press
+
+**Added support for iOS 12.4
